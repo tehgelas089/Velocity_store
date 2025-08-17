@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Velocity Store</title>
+      <link rel="website icon" type="png" href="images/velocity store.png">
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- font css -->
+      <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+
+      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+   </head>
+   <body>
+
+      <style>
+         .bennere .card {
+          border: none;
+          background: transparent;
+          box-shadow: none;
+        }
+        
+           .modal {
+             display: none;
+             position: fixed;
+             z-index: 9999;
+             padding-top: 60px;
+             left: 0; top: 0;
+             width: 100%; height: 100%;
+             overflow: auto;
+             background-color: rgba(0,0,0,0.8);
+           }
+           
+           .modal-content {
+             position: relative;
+             margin: auto;
+             padding: 0;
+             width: 80%;
+             max-width: 800px;
+           }
+           
+           .video-container {
+             position: relative;
+             padding-bottom: 56.25%;
+             height: 0;
+             overflow: hidden;
+             border-radius: 10px;
+           }
+           
+           .video-container iframe {
+             position: absolute;
+             top: 0; left: 0;
+             width: 100%; height: 100%;
+           }
+           
+           .close-btn {
+             color: white;
+             position: absolute;
+             top: -30px;
+             right: 0;
+             font-size: 40px;
+             font-weight: bold;
+             cursor: pointer;
+           }
+           .close-btn {
+          color: white;
+          position: absolute;
+          top: 20px;
+          right: 30px;
+          font-size: 40px;
+          font-weight: bold;
+          cursor: pointer;
+          z-index: 10000;
+          transition: 0.3s;
+        }
+        
+        .close-btn:hover {
+          color: #ff5f5f;
+        }
+        .navbar {
+         background-color: #222831;
+         color: white;
+         
+        }
+       
+        </style>
+      <!-- <div class="header_section">
+         <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+               <header><a class="navbar-brand"href="index.html"><h1 style="font-size: 3rem;">Velocity Store </h1></a></header>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button> -->
+               <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto">
+                     <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="pricing.html">Pricing Plans</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="shop.html">Shop</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                     </li>
+                  </ul>
+                  <form class="form-inline my-2 my-lg-0">
+                     <div class="login_bt">
+                        <ul>
+                            
+                           <li><a href="#">Login</a></li>
+                           <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                        </ul>
+                     </div>
+                  </form>
+               </div>
+            </nav>
+         </div> -->
+         <nav class="navbar navbar-expand-lg  fixed-top"> 
+            <div class="container">
+               <img src="images/Velo Big.png" class="rounded-circle" style="height: 70px; width: 70px;">
+               <header><a class="navbar-brand"href="index.html"><h1 style="font-size: 30px; color: white;">Velocity Store </h1></a></header>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item" title="Beranda">
+                            <a class="nav-link active" aria-current="page" href="index.html" style="color: white;">Home</a>
+                        </li>
+                        <li class="nav-item" title="Tentang kami">
+                            <a class="nav-link" href="about.html" style="color: white;">About</a>
+                        </li>
+                        <li class="nav-item" title="Toko">
+                            <a class="nav-link" href="store.html" style="color: white;">Shop</a>
+                        </li>
+                        <li class="nav-item" title="Kontak">
+                           <a class="nav-link" href="pricing.html" style="color: white;">Contact</a>
+                       </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        
+       
+       
+
+        
+         <!-- banner section start --> 
+
+         <div class="banner_section layout_padding">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-6" style="top: 50px;" >
+                     <h1 class="banner_taital">Top-up, Joki & <span style="color: #2b2b2b;">Cari Akun game </span></h1>
+                     <p class="banner_text">Tempat Top-up, Joki & Cari Akun game termurah di Indonesia</p>
+                      <div class="started_text"><a href="member.html">Tahap BETA</a></div>
+                      <div class="play_icon" onclick="openVideo()" style="cursor: pointer;"><img src="images/play-icon.png"></div>
+                     
+                      <br>
+
+                     <!-- Popup Video Modal -->
+ <div id="videoModal" class="modal">
+   <div class="modal-content">
+     <span class="close-btn" onclick="closeVideo()">&times;</span>
+     <div class="video-container">
+       <iframe id="videoFrame" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+     </div>
+   </div>
+ </div>
+ <span class="close-btn" onclick="closeVideo()">&times;</span>
+
+
+   
+   <script>
+      function openVideo() {
+        const videoURL = "https://www.youtube.com/embed/mW_3UyTBNqc?autoplay=1";
+        document.getElementById("videoFrame").src = videoURL;
+        document.getElementById("videoModal").style.display = "block";
+      }
+      
+      function closeVideo() {
+        document.getElementById("videoFrame").src = "";
+        document.getElementById("videoModal").style.display = "none";
+      }
+   </script>
+   
+   <!-- Modal for video -->
+   <div id="videoModal" style="display: none;">
+     <div>
+       <button onclick="closeVideo()">Close</button>
+       <iframe 
+         id="videoFrame" 
+         width="560" 
+         height="315" 
+         frameborder="0" 
+         allow="autoplay; encrypted-media" 
+         allowfullscreen>
+       </iframe>
+     </div>
+   </div>
+
+                      
+                  </div>
+                   <div class="col-md-6">
+                     <div id="banner_slider" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                           <div class="carousel-item active">
+                              <div class="banner_img"><img src="images/VCstore.jpeg"></div>
+                           </div>
+                           <div class="carousel-item">
+                              <div class="banner_img"><img src="images/VCstore.jpeg"></div>
+                           </div>
+                           <div class="carousel-item">
+                              <div class="banner_img"><img src="images/VCstore.jpeg"></div>
+                           </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#banner_slider" role="button" data-slide="prev">
+                        <i class="fa fa-angle-left"></i>
+                        </a>
+                        <a class="carousel-control-next" href="#banner_slider" role="button" data-slide="next">
+                        <i class="fa fa-angle-right"></i>
+                        </a>
+                     </div> 
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- banner section end -->
+      </div>
+
+    
+      </div>
+      <!-- services section start -->
+      <div class="services_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-4">
+                  <h1 class="services_taital">Keunggulan</h1>
+                  <p class=" services_text"> pengiriman Top-up cepat, harga terjangkau, akun aman, no tipu-tipu, joki cepat dan profesional.</p>
+                  <div class="readmore_btn"><a href="#">Tahap beta</a></div>
+               </div>
+               <div class="col-md-8">
+                  <h1 class="services_taital">
+                     <div class="services_box">
+                        <div class="services_box_left">
+                           <h5 class="fashion_text">Aman</h5>
+                           <div><i class='bx bx-shield-plus icon-custom'></i></div>
+                       </div>
+                       
+                       <style>
+                           .icon-custom {
+                               font-size: 100px; 
+                               color: rgb(0, 255, 0); 
+                           }
+                       </style>
+                       
+                       
+                        <div class="services_box_right">
+                           <h5 class="fashion_text">Cepat</h5>
+                           <div><i class='bx bx-stopwatch icon-servis'></i></div>
+                        </div>
+                        <style>
+                           .icon-servis {
+                               font-size: 100px; 
+                               color: rgb(235, 248, 92); 
+                           }
+                       </style>
+                     </div>
+                     <div class="services_box_2">
+                        <div class="services_box_left">
+                           <h5 class="fashion_text">profesional</h5>
+                           <div><img src="images/icon-3.png"></div>
+                        </div>
+                        <div class="services_box_right">
+                           <h5 class="fashion_text">Give way</h5>
+                           <div><img src="images/icon-4.png"></div>
+                        </div>
+                     </div>
+                  </h1>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- services section end -->
+      <!-- shop section start -->
+      <div class="blog_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <h1 class="blog_taital">Melayani </h1>
+               </div>
+            </div>
+            <div class="blog_section_2">
+               <div id="main_slider" class="carousel slide" data-ride="carousel">
+                  <div class="carousel-inner">
+                     <div class="carousel-item active">
+                        <div class="row">
+                           <div class="col-md-4">
+                              <p class="title_text" style="text-align: center;">Top-up</p>
+                              <div class="blog_img"><img src="images/MLBB_Naruto_2025.jpg"></div>
+                              <h6 class="number_text">01</h6>
+                              <div class="callnow_btn">
+                                  <div class="chat_bt"><a href="shop.html">Start Now</a></div>
+                                  <!-- <div class="call_bt active"><a href="#">Information</a></div> -->
+                              </div>
+                          </div>
+                          
+                          <div class="col-md-4">
+                              <p class="title_text" style="text-align: center;">Joki Game</p>
+                              <div class="blog_img"><img src="images/joki.jpg"></div>
+                              <h6 class="number_text">02</h6>
+                              <div class="callnow_btn">
+                                  <div class="chat_bt"><a href="Joki.html">Start Now</a></div>
+                                  <!-- <div class="call_bt active"><a href="#">Information</a></div> -->
+                              </div>
+                          </div>
+                          
+                          <div class="col-md-4">
+                              <p class="title_text" style="text-align: center;">Akun Shop</p>
+                              <div class="blog_img"><img src="images/akunjual.jpg"></div>
+                              <h6 class="number_text">03</h6>
+                              <div class="callnow_btn">
+                                  <div class="chat_bt"><a href="akunshop.html">Start Now</a></div>
+                                  <!-- <div class="call_bt active"><a href="#">Information</a></div> -->
+                              </div>
+                          </div>
+                          
+                           </div>
+                        </div>
+                     </div>
+                     <div class="carousel-item">
+                        <div class="row">
+                           <div class="col-md-4">
+                              <div class="blog_img"><img src="images/blog-img.png"></div>
+                              <h6 class="number_text">01</h6>
+                              <div class="callnow_btn">
+                                 <div class="chat_bt"><a href="#">Chat Now</a></div>
+                                 <div class="call_bt active"><a href="#">Call Now</a></div>
+                              </div>
+                           </div>
+                           <div class="col-md-4">
+                              <div class="blog_img"><img src="images/blog-img1.png"></div>
+                              <h6 class="number_text">02</h6>
+                              <div class="callnow_btn">
+                                 <div class="chat_bt"><a href="#">Chat Now</a></div>
+                                 <div class="call_bt active"><a href="#">Call Now</a></div>
+                              </div>
+                           </div>
+                           <div class="col-md-4">
+                              <div class="blog_img"><img src="images/blog-img2.png"></div>
+                              <h6 class="number_text">03</h6>
+                              <div class="callnow_btn">
+                                 <div class="chat_bt"><a href="#">Chat Now</a></div>
+                                 <div class="call_bt active"><a href="#">Call Now</a></div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="carousel-item">
+                        <div class="row">
+                           <div class="col-md-4">
+                              <div class="blog_img"><img src="images/blog-img.png"></div>
+                              <h6 class="number_text">01</h6>
+                              <div class="callnow_btn">
+                                 <div class="chat_bt"><a href="#">Chat Now</a></div>
+                                 <div class="call_bt active"><a href="#">Call Now</a></div>
+                              </div>
+                           </div>
+                           <div class="col-md-4">
+                              <div class="blog_img"><img src="images/blog-img1.png"></div>
+                              <h6 class="number_text">02</h6>
+                              <div class="callnow_btn">
+                                 <div class="chat_bt"><a href="#">Chat Now</a></div>
+                                 <div class="call_bt active"><a href="#">Call Now</a></div>
+                              </div>
+                           </div>
+                           <div class="col-md-4">
+                              <div class="blog_img"><img src="images/blog-img2.png"></div>
+                              <h6 class="number_text">03</h6>
+                              <div class="callnow_btn">
+                                 <div class="chat_bt"><a href="#">Chat Now</a></div>
+                                 <div class="call_bt active"><a href="#">Call Now</a></div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+                  <i class="fa fa-angle-left"></i>
+                  </a>
+                  <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
+                  <i class="fa fa-angle-right"></i>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- shop section end -->
+      <!-- about section start -->
+      
+
+      <div class="container text-center">
+         <div class="pricing_section layout_padding">
+             <div class="container">
+                 <div class="row">
+                     <div class="col-md-12">
+                         <h1 class="pricing_taital">Berlangganan Member</h1>
+                     </div>
+                 </div>
+                 <div class="pricing_section_2">
+                     <div class="row justify-content-center">
+                         
+                         <!-- Paket Regular -->
+                         <div class="col-md-4">
+                             <div class="pricing_box">
+                                 <h6 class="regular_text">Regular</h6>
+                                 <div class="taital_main">
+                                     <h3 class="dolor_text">Rp</h3>
+                                     <h1 class="dolor_text_1">30</h1>
+                                     <p class="month_text">/Per Month</p>
+                                 </div>
+                                 <p class="using_text">Akses: mendapatkan diskon 20% setiap pembelian</p>
+                                 <div class="readmore_bt"><a href="member.html">Berlangganan</a></div>
+                             </div>
+                         </div>
+     
+                         <!-- Paket Premium -->
+                         <div class="col-md-4">
+                             <div class="pricing_box">
+                                 <h6 class="regular_text">Premium</h6>
+                                 <div class="taital_main">
+                                     <h3 class="dolor_text">Rp</h3>
+                                     <h1 class="dolor_text_1">50</h1>
+                                     <p class="month_text">/Per Month</p>
+                                 </div>
+                                 <p class="using_text">Akses: mendapatkan kode diskon 50% per-bulan dan bonus top-up</p>
+                                 <div class="readmore_bt"><a href="member.html">Berlangganan</a></div>
+                             </div>
+                         </div>
+     
+                         <!-- Paket VIP -->
+                         <div class="col-md-4">
+                             <div class="pricing_box">
+                                 <h6 class="regular_text">VIP</h6>
+                                 <div class="taital_main">
+                                     <h3 class="dolor_text">Rp</h3>
+                                     <h1 class="dolor_text_1">100</h1>
+                                     <p class="month_text">/Per Month</p>
+                                 </div>
+                                 <p class="using_text">Akses: semua benefit Premium + layanan eksklusif & prioritas</p>
+                                 <div class="readmore_bt"><a href="member.html">Berlangganan  </a></div>
+                             </div>
+                         </div>
+     
+                     </div> <!-- End row -->
+                 </div>
+             </div>
+         </div>
+     </div>
+     
+
+        <!--CONTACT-->        
+      <div class="customer_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-sm-12">
+                  <h1 class="customer_taital">Owner</h1>
+               </div>
+            </div>
+         </div>
+         <div id="my_slider" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+               <div class="carousel-item active">
+                  <div class="customer_section_2">
+                     <div class="container">
+                        <div class="row">
+                           <div class="col-md-12">
+                              <div class="box_main">
+                                 <div class="customer_main">
+                                    <p class="enim_text">Apabila anda mengalami penipuan, error dan masalah lainnya pada pembelian di store kami ataupun ingin mengetahui info ter-update mengenai store kami anda dapat menghubungi kami melalu contact kami di website ini atau dm ig kepada Dion    </p>
+                                    <div class="customer_left">
+                                       <div class="customer_img"><img src="images/Screenshot 2025-03-02 061221.png" style="height: 150px;"></div>
+                                    </div>
+                                    <div class="customer_right">
+                                       <h3 class="customer_name">Dion Septian Kevin</h3>
+                                       <p class="web_text">Siswa SMK XI  </p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- <div class="carousel-item">
+                  <div class="customer_section_2">
+                     <div class="container">
+                        <div class="row">
+                           <div class="col-md-12">
+                              <div class="box_main">
+                                 <div class="customer_main">
+                                    <p class="enim_text">has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors </p>
+                                    <div class="customer_left">
+                                       <div class="customer_img"><img src="images/customer-img.png"></div>
+                                    </div>
+                                    <div class="customer_right">
+                                       <h3 class="customer_name">Content</h3>
+                                       <p class="web_text">And web page </p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div> -->
+               <!-- <div class="carousel-item">
+                  <div class="customer_section_2">
+                     <div class="container">
+                        <div class="row">
+                           <div class="col-md-12">
+                              <div class="box_main">
+                                 <div class="customer_main">
+                                    <p class="enim_text">has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors </p>
+                                    <div class="customer_left">
+                                       <div class="customer_img"><img src="images/customer-img.png"></div>
+                                    </div>
+                                    <div class="customer_right">
+                                       <h3 class="customer_name">Content</h3>
+                                       <p class="web_text">And web page </p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div> -->
+            <!-- <a class="carousel-control-prev" href="#my_slider" role="button" data-slide="prev">
+            <i class="fa fa-angle-left"></i>
+            </a>
+            <a class="carousel-control-next" href="#my_slider" role="button" data-slide="next">
+            <i class="fa fa-angle-right"></i>
+            </a>
+         </div> -->
+      </div>
+     
+      <!-- contact section end -->
+      <!-- footer section start -->
+      <div class="footer_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <h1 class="useful_text" style="text-align: center;">Velocity Store </h1>
+                   
+               </div>
+            </div>
+            <!--Footer-->
+            <div class="footer_section_2">
+               <div class="row">
+                  <div class="col-lg-3 col-sm-6">
+                     <h2 class="useful_text">Anggota kerja kami </h2>
+                     <div class="footer_menu">
+                        <ul>
+                           <li><a href="#">manager</a></li>
+                           <li><a href="#">Seketaris</a></li>
+                           <li><a href="#">Bendahara</a></li>
+                           <li><a href="#">divisi top-up</a></li>
+                           <li><a href="#">divisi penjoki dan akun</a></li>
+                           <li><a href="#">Marketing </a></li>
+                        </ul>
+                     </div>
+                  </div>
+                  
+                  <div class="col-lg-3 col-sm-6">
+                     <h2 class="useful_text">Medsos kami</h2>
+                     <div class="social_icon">
+                        <ul>
+                           <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                           <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                         
+                           <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6">
+                     <h2 class="useful_text">Saweria Link</h2>
+                    <img src="images/Saweria.png">
+                    <br>
+                    <p style="display: inline;">Support kami dengan sedekahmu ;) </p>
+                    
+                  </div>
+               </div>
+            </div>
+            <div class="input_main">
+               <input type="text" class="email_text" placeholder="Masukkan pesanmu" name="Enter your email">
+               <div class="subscribe_bt"><a href="#">Donate$</a></div>
+            </div>
+         </div>
+      </div>
+      <!-- footer section end -->
+      <!-- copyright section start -->
+      <div class="copyright_section">
+         <div class="container">
+            <p class="copyright_text">Kami berkerjasama dengan.Supponsor by: <a href="https://html.design">MPLC INDONESIA.</a> 8/4/2025 by: <a href="https://themewagon.com">Velocity store</a></p>
+         </div>
+      </div>
+      <!-- copyright section end -->
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <!-- javascript --> 
+      <script>
+         // Material Select Initialization
+         $(document).ready(function() {
+         $('.mdb-select').materialSelect();
+         $('.select-wrapper.md-form.md-outline input.select-dropdown').bind('focus blur', function () {
+         $(this).closest('.select-outline').find('label').toggleClass('active');
+         $(this).closest('.select-outline').find('.caret').toggleClass('active');
+         });
+         });
+      </script>
+   </body>
+</html>
