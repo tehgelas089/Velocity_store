@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Velocity Store</title>
+      <link rel="website icon" type="png" href="images/velocity store.png">
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- font css -->
+      <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+   </head>
+   <body>
+      
+       
+       <div class="header_section header_bg">
+         <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #222831;">
+               <header><a class="navbar-brand"href="store.html"><h1 style="font-size: 30px; color: white;">Back </h1></a></header>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto">
+                     <li class="nav-item active">
+                        <header><a class="navbar-brand"href="#"><b style="font-size: 30px; color: white;">Velocity store </b></a></header>
+                     </li>
+                  </ul>
+                  <form class="form-inline my-2 my-lg-0">
+                     <div class="login_bt">
+                        <ul>
+                         
+                           <li><a href="login.html">Login</a></li>
+                           <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                        </ul>
+                     </div>
+                  </form>
+               </div>
+            </nav>
+         </div>
+      </div>
+      
+       <center>
+       <!-- Carousel Container -->
+       <div class="col-md-8">
+         <div id="banner_slider" class="carousel slide" data-ride="carousel" style="top: 50px;">
+            <div class="carousel-inner">
+               <div class="carousel-item active">
+                  <div class="banner_img"><img src="images/satu.png" class="d-block w-100" alt="Topup"></div>
+               </div>
+               <div class="carousel-item">
+                  <div class="banner_img"><img src="images/Velocity.png" class="d-block w-100" alt="Lapak"></div>
+               </div>
+               <div class="carousel-item">
+                  <div class="banner_img"><img src="images/Bos.png" class="d-block w-100" alt="VC Store"></div>
+               </div>
+            </div>
+            <a class="carousel-control-prev" href="#banner_slider" role="button" data-slide="prev" style="top: 50%; transform: translateY(-50%);">
+               <i class="fa fa-angle-left"></i>
+            </a>
+            <a class="carousel-control-next" href="#banner_slider" role="button" data-slide="next" style="top: 50%; transform: translateY(-50%);">
+               <i class="fa fa-angle-right"></i>
+            </a>
+         </div>
+      </div>
+      
+      <br>
+      <!-- header section end -->
+
+      <style>
+         body {
+    padding-top: 80px; /* Sesuaikan dengan tinggi navbar */
+}
+
+         .select_box_main {
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+             width: 100%;
+         }
+         .select_box_main .select-outline {
+             width: 100%;
+             max-width: 600px;
+             margin-bottom: 15px;
+         }
+         .enter_bt, .mdb-select {
+             width: 100%;
+             padding: 15px;
+             border-radius: 5px;
+             border: 1px solid #ccc;
+             font-size: 16px;
+             font-weight: bold;
+             color: black;
+         }
+         .search_btn {
+             text-align: center;
+         }
+     
+      .select_box_main {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+      }
+      .select_box_main .select-outline {
+          width: 100%;
+          max-width: 600px;
+          margin-bottom: 15px;
+      }
+      .enter_bt, .mdb-select {
+          width: 100%;
+          padding: 15px;
+          border-radius: 5px;
+          border: 1px solid #ccc;
+          font-size: 16px;
+          font-weight: bold;
+      }
+      .search_btn {
+          text-align: center;
+      }  
+      
+      .enter_bt {
+          border: 2px solid #ccc;
+          transition: border-color 0.3s ease-in-out;
+      }
+      
+      .enter_bt:focus, .enter_bt:hover {
+          border-color:  #1DCD9F; /* Warna hijau saat di klik atau di-hover */
+          outline: none;
+          box-shadow: 0 0 5px rgb(0, 255, 0);
+      }
+  
+
+      
+   </style>
+   
+   <form id="topupForm">
+      <div class="container">
+         <h1 class="banner_taital" style="text-align: center; margin-top: 80px;">Top-up Game</h1>
+
+         <div class="select_box_section">
+            <div class="select_box_main">
+               <div class="select-outline">
+                  <input type="text" class="enter_bt" placeholder="ID Game" name="game_id" id="gameId" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+               </div>
+               <div class="select-outline">
+                  <select class="mdb-select md-form md-outline colorful-select dropdown-primary" id="gameCategory">
+                     <option value="" disabled selected>Server</option>
+                     <option value="1">IDR</option>
+                     <option value="2">May</option>
+                     <option value="3">USA</option>
+                  </select>
+               </div>
+               <div class="select-outline">
+                  <input type="text" class="form-control enter_bt" id="promoCode" placeholder="Kode Promo" name="Kode">
+                  
+               </div>
+               <div class="select-outline">
+                  <select class="mdb-select md-form md-outline colorful-select dropdown-primary" id="paymentMethod">
+                     <option value="" disabled selected>Metode Pembayaran</option>
+                     <option value="1">Go pay</option>
+                     <option value="2">Dana</option>
+                     <option value="3">Ovo</option>
+                  </select>
+               </div>
+               
+
+              
+
+              
+                  
+               <div class="search_btn">
+                  <a href="#" id="topupBtn">Top-up</a>
+               </div>
+            </div>
+         </div>
+        
+      </div>
+  
+   
+   <script>
+      document.getElementById("topupBtn").addEventListener("click", function(event) {
+          event.preventDefault();
+          let gameId = document.getElementById("gameId").value.trim();
+          let gameCategory = document.getElementById("gameCategory").value;
+          let jumlahPembelian = document.getElementById("promoCode").value.trim();
+          let paymentMethod = document.getElementById("paymentMethod").value;
+          
+          if (!gameId || !gameCategory || !jumlahPembelian || !paymentMethod) {
+              alert("Harap isi semua field sebelum melakukan top-up!");
+              return;
+          }
+          
+          alert("Top-up sukses!");
+          document.getElementById("topupForm").reset();
+      });
+
+   </script>
+   <br>
+  
+     <div class="select_box_section">
+      <div class="select_box_main">
+         <div class="select-outline">
+            
+           
+                <style>
+                    :root {
+                        --primary: #1DCD9F;
+                        --primary-dark: #16a37d;
+                        --secondary: #222831;
+                        --light-gray: #f5f7fa;
+                        --text-gray: #6b7280;
+                    }
+                    
+                    
+                    
+                    
+                    .header {
+                        text-align: center;
+                        margin-bottom: 30px;
+                    }
+                    
+                    h1 {
+                        color: var(--secondary);
+                        font-size: 26px;
+                        font-weight: 700;
+                        margin-bottom: 5px;
+                    }
+                    
+                    .section-title {
+                        color: var(--secondary);
+                        font-weight: 600;
+                        font-size: 18px;
+                        margin: 30px 0 15px 0;
+                        padding-bottom: 8px;
+                        border-bottom: 2px solid rgba(29, 205, 159, 0.2);
+                    }
+                    
+                    .package-grid {
+                        display: grid;
+                        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+                        gap: 15px;
+                        margin-bottom: 10px;
+                        
+                    }
+                    
+                    .package-card {
+                        background-color: #393E46;
+                        border-radius: 12px;
+                        padding: 18px;
+                        box-shadow: 0 8px 20px #1DCD9F;
+                        border-top: 4px solid var(--primary);
+                        transition: transform 0.2s, box-shadow 0.2s;
+                    }
+                    
+                    .package-card:hover {
+                        transform: translateY(-2px);
+                        box-shadow: 0 8px 20px  #16a37d;
+                    }
+                    
+                    .package-title {
+                        /* color: var(--secondary); */
+                        font-weight: 600;
+                        font-size: 15px;
+                        margin-bottom: 8px;
+                        color: white;
+                        
+                    }
+                    
+                    .package-details {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: flex-end;
+                    }
+                    
+                    .diamond-count {
+                        /* color: var(--text-gray); */
+                        font-size: 13px;
+                        color: white;
+                    }
+                    
+                    .price {
+                        /* color: var(--primary); */
+                        font-weight: 700;
+                        font-size: 17px;
+                        color: white;
+                    }
+                    
+                    .highlight-card {
+                        grid-column: 1 / -1;
+                        /* background: linear-gradient(135deg, rgba(29, 205, 159, 0.08) 0%, rgba(29, 205, 159, 0.03) 100%); */
+                        border-top: 4px solid var(--primary-dark);
+                        background-color: #393E46;
+                    }
+                    
+                    .highlight-card .package-title {
+                        font-size: 16px;
+                    }
+                    
+                    .highlight-card .price {
+                        font-size: 19px;
+                    }
+                    
+                    .badge {
+                        display: inline-block;
+                        background-color: var(--primary);
+                        color: white;
+                        font-size: 11px;
+                        font-weight: 600;
+                        padding: 3px 8px;
+                        border-radius: 20px;
+                        margin-left: 8px;
+                        vertical-align: middle;
+                    }
+                </style>
+           
+                <div class="header">
+                    <h1>Pillh Nominal Top Up</h1>
+                </div>
+            
+                <div class="section-title">PAKET EVENT RECHARGE</div>
+                <div class="package-grid">
+                    <div class="package-card highlight-card">
+                        <div class="package-title">568 Diamonds <span class="badge">503 + 65 Bonus</span></div>
+                        <div class="package-details">
+                            <div class="diamond-count">Limited time offer</div>
+                            <div class="price">Rp 154.000,–</div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="section-title">WEEKLY DIAMOND PASS</div>
+                <div class="package-grid">
+                    <div class="package-card">
+                        <div class="package-title">Weekly Diamond Pass x3</div>
+                        <div class="package-details">
+                            <div class="diamond-count">Best value</div>
+                            <div class="price">Rp 85.800,–</div>
+                        </div>
+                    </div>
+                    
+                    <div class="package-card">
+                        <div class="package-title">Weekly Diamond Pass x2</div>
+                        <div class="package-details">
+                            <div class="diamond-count"></div>
+                            <div class="price">Rp 57.200,–</div>
+                        </div>
+                    </div>
+                    
+                    <div class="package-card">
+                        <div class="package-title">Weekly Diamond Pass</div>
+                        <div class="package-details">
+                            <div class="diamond-count"></div>
+                            <div class="price">Rp 28.600,–</div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="section-title">REGULAR DIAMOND PACKAGES</div>
+                <div class="package-grid">
+                    <div class="package-card">
+                        <div class="package-title">5 Diamonds</div>
+                        <div class="package-details">
+                            <div class="diamond-count"></div>
+                            <div class="price">Rp 2.000,–</div>
+                        </div>
+                    </div>
+                    
+                    <div class="package-card">
+                        <div class="package-title">12 Diamonds <span class="badge">11 + 1</span></div>
+                        <div class="package-details">
+                            <div class="diamond-count"></div>
+                            <div class="price">Rp 4.000,–</div>
+                        </div>
+                    </div>
+                    
+                    <div class="package-card">
+                        <div class="package-title">19 Diamonds <span class="badge">17 + 2</span></div>
+                        <div class="package-details">
+                            <div class="diamond-count"></div>
+                            <div class="price">Rp 6.000,–</div>
+                        </div>
+                    </div>
+                    
+                    <div class="package-card">
+                        <div class="package-title">28 Diamonds <span class="badge">25 + 3</span></div>
+                        <div class="package-details">
+                            <div class="diamond-count"></div>
+                            <div class="price">Rp 8.500,–</div>
+                        </div>
+                    </div>
+                    
+                    <div class="package-card">
+                        <div class="package-title">44 Diamonds <span class="badge">40 + 4</span></div>
+                        <div class="package-details">
+                            <div class="diamond-count"></div>
+                            <div class="price">Rp 12.500,–</div>
+                        </div>
+                    </div>
+                    
+                    <div class="package-card">
+                        <div class="package-title">59 Diamonds <span class="badge">53 + 6</span></div>
+                        <div class="package-details">
+                            <div class="diamond-count"></div>
+                            <div class="price">Rp 16.500,–</div>
+                        </div>
+                    </div>
+                    
+                    <div class="package-card">
+                        <div class="package-title">71 Diamonds <span class="badge">64 + 7</span></div>
+                        <div class="package-details">
+                            <div class="diamond-count"></div>
+                            <div class="price">Rp 20.000,–</div>
+                        </div>
+                    </div>
+                    
+                    <div class="package-card">
+                        <div class="package-title">85 Diamonds <span class="badge">77 + 8</span></div>
+                        <div class="package-details">
+                            <div class="diamond-count"></div>
+                            <div class="price">Rp 24.000,–</div>
+                        </div>
+                    </div>
+                    
+                    <div class="package-card">
+                        <div class="package-title">113 Diamonds <span class="badge">102 + 11</span></div>
+                        <div class="package-details">
+                            <div class="diamond-count"></div>
+                            <div class="price">Rp 32.000,–</div>
+                        </div>
+                    </div>
+                </div>
+           
+         </div>
+         </div>
+         </div>
+         </form> 
+        
+             
+              </div>
+            </div>
+          </div>
+
+
+
+
+    
+   
+      <!-- shop section end -->
+      <!-- footer section start -->
+      <div class="footer_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <h1 class="useful_text" style="text-align: center;">Velocity Store </h1>
+                   
+               </div>
+            </div>
+            <!--Footer-->
+            <div class="footer_section_2">
+               <div class="row">
+                  <div class="col-lg-3 col-sm-6">
+                     <h2 class="useful_text">Anggota kerja kami </h2>
+                     <div class="footer_menu">
+                        <ul>
+                           <li><a href="#">manager</a></li>
+                           <li><a href="#">Seketaris</a></li>
+                           <li><a href="#">Bendahara</a></li>
+                           <li><a href="#">divisi top-up</a></li>
+                           <li><a href="#">divisi penjoki dan akun</a></li>
+                           <li><a href="#">Marketing </a></li>
+                        </ul>
+                     </div>
+                  </div>
+                  
+                  <div class="col-lg-3 col-sm-6">
+                     <h2 class="useful_text">Medsos kami</h2>
+                     <div class="social_icon">
+                        <ul>
+                           <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                           <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                         
+                           <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6">
+                     <h2 class="useful_text">Saweria Link</h2>
+                    <img src="images/Saweria.png">
+                    <br>
+                    <p style="display: inline;">Support kami dengan sedekahmu ;) </p>
+                    
+                  </div>
+               </div>
+            </div>
+            <div class="input_main">
+               <input type="text" class="email_text" placeholder="Masukkan pesanmu" name="Enter your email">
+               <div class="subscribe_bt"><a href="#">Donate$</a></div>
+            </div>
+         </div>
+      </div>
+      <!-- footer section end -->
+      <!-- copyright section start -->
+      <div class="copyright_section">
+         <div class="container">
+            <p class="copyright_text">Kami berkerjasama dengan.Supponsor by: <a href="https://html.design">MPLC INDONESIA.</a> 8/4/2025 by: <a href="https://themewagon.com">Velocity store</a></p>
+         </div>
+      </div>
+      <!-- copyright section end -->
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <!-- javascript --> 
+      <script>
+         // Material Select Initialization
+         $(document).ready(function() {
+         $('.mdb-select').materialSelect();
+         $('.select-wrapper.md-form.md-outline input.select-dropdown').bind('focus blur', function () {
+         $(this).closest('.select-outline').find('label').toggleClass('active');
+         $(this).closest('.select-outline').find('.caret').toggleClass('active');
+         });
+         });
+      </script>
+   </body>
+</html>

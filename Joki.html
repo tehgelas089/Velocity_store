@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Velocity Store</title>
+      <link rel="website icon" type="png" href="images/velocity store.png">
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- font css -->
+      <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+   </head>
+   <body>
+      
+       
+       <div class="header_section header_bg">
+         <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #222831">
+               <header><a class="navbar-brand"href="store.html"><h1 style="font-size: 30px; color: white;">Back </h1></a></header>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto">
+                     <li class="nav-item active">
+                        <header><a class="navbar-brand"href="#"><b style="font-size: 30px; color: white;">Velocity store </b></a></header>
+                     </li>
+                  </ul>
+                  <form class="form-inline my-2 my-lg-0">
+                     <div class="login_bt">
+                        <ul>
+                         
+                           <li><a href="login.html">Login</a></li>
+                           <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                        </ul>
+                     </div>
+                  </form>
+               </div>
+            </nav>
+         </div>
+      </div>
+       
+       
+      <br>
+      <!-- header section end -->
+
+      <style>
+         body {
+    padding-top: 80px; /* Sesuaikan dengan tinggi navbar */
+}
+
+         .select_box_main {
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+             width: 100%;
+         }
+         .select_box_main .select-outline {
+             width: 100%;
+             max-width: 600px;
+             margin-bottom: 15px;
+         }
+         .enter_bt, .mdb-select {
+             width: 100%;
+             padding: 15px;
+             border-radius: 5px;
+             border: 1px solid #ccc;
+             font-size: 16px;
+             font-weight: bold;
+             color: black;
+         }
+         .search_btn {
+             text-align: center;
+         }
+     
+      .select_box_main {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+      }
+      .select_box_main .select-outline {
+          width: 100%;
+          max-width: 600px;
+          margin-bottom: 15px;
+      }
+      .enter_bt, .mdb-select {
+          width: 100%;
+          padding: 15px;
+          border-radius: 5px;
+          border: 1px solid #ccc;
+          font-size: 16px;
+          font-weight: bold;
+      }
+      .search_btn {
+          text-align: center;
+      }
+      
+   </style>
+   
+   <br>
+   <form id="topupForm">
+      <div class="container">
+         <h1 class="banner_taital" style="text-align: center; margin-top: 80px;">Joki Game</h1>
+
+         <div class="select_box_section">
+            <div class="select_box_main">
+               <div class="select-outline">
+                  <input type="text" class="enter_bt" placeholder="ID Game" name="game_id" id="gameId" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+               </div>
+
+              <div class="select-outline" style="position: relative;">
+    <input type="password" class="enter_bt" placeholder="Password Akun" name="game_pas" id="gamePassword">
+    <input type="checkbox" onclick="togglePassword()"  style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer;">
+        
+    </input>
+</div>
+
+<!-- <script>
+    function togglePassword() {
+        var passwordField = document.getElementById("gamePassword");
+
+        // Toggle between password and text input types
+        if (passwordField.type === "password") {
+            passwordField.type = "text";
+        } else {
+            passwordField.type = "password";
+        }
+    }
+</script> -->
+
+              
+               <div class="select-outline">
+                  <select class="mdb-select md-form md-outline colorful-select dropdown-primary" id="gameCategory">
+                     <option value="" disabled selected>Server</option>
+                     <option value="1">IND</option>
+                     <option value="2">May</option>
+                     <option value="3">USA</option>
+                  </select>
+               </div>
+               <div class="select-outline">
+                  <input type="text" class="enter_bt" placeholder="Target Rank" name="jumlah" id="jumlahPembelian">
+               </div>
+               <div class="select-outline">
+                  <select class="mdb-select md-form md-outline colorful-select dropdown-primary" id="paymentMethod">
+                     <option value="" disabled selected>Metode Pembayaran</option>
+                     <option value="1">Go pay</option>
+                     <option value="2">Dana</option>
+                     <option value="3">Ovo</option>
+                  </select>
+                  
+                  <div class="select_box_main">
+                     <div class="select-outline">
+                        <textarea  class="enter_bt" placeholder="pesan untuk penjoki" name="masage" id="pesan"></textarea>
+                     </div>
+
+               <div class="search_btn">
+                  <a href="#" id="topupBtn">Joki</a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </form>
+   
+   <script>
+      document.getElementById("topupBtn").addEventListener("click", function(event) {
+        event.preventDefault();
+    
+        let gameId = document.getElementById("gameId").value.trim();
+        let gamePassword = document.getElementById("gamePassword").value.trim();
+        let gameCategory = document.getElementById("gameCategory").value;
+        let jumlahPembelian = document.getElementById("jumlahPembelian").value.trim();
+        let paymentMethod = document.getElementById("paymentMethod").value;
+        let masage = document.getElementById("pesan").value.trim();
+        // Validasi input
+        if (!gameId || !gamePassword || !gameCategory || !jumlahPembelian || !paymentMethod || !masage) {
+          alert("Harap isi semua field sebelum melakukan Joki!");
+          return;
+        }
+    
+        // Semua valid, tampilkan pesan sukses
+        alert("Akun Anda siap di Joki!");
+        document.getElementById("topupForm").reset();
+      });
+    
+      function togglePassword() {
+        var passwordField = document.getElementById("gamePassword");
+    
+        // Toggle antara tipe password dan text
+        if (passwordField.type === "password") {
+          passwordField.type = "text";
+        } else {
+          passwordField.type = "password";
+        }
+      }
+    </script>
+    
+            </div>
+         </div>
+      </div>
+   </form>
+   
+      <!-- shop section end -->
+      <!-- footer section start -->
+      <div class="footer_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <h1 class="useful_text" style="text-align: center;">Velocity Store </h1>
+                   
+               </div>
+            </div>
+            <!--Footer-->
+            <div class="footer_section_2">
+               <div class="row">
+                  <div class="col-lg-3 col-sm-6">
+                     <h2 class="useful_text">Anggota kerja kami </h2>
+                     <div class="footer_menu">
+                        <ul>
+                           <li><a href="#">manager</a></li>
+                           <li><a href="#">Seketaris</a></li>
+                           <li><a href="#">Bendahara</a></li>
+                           <li><a href="#">divisi top-up</a></li>
+                           <li><a href="#">divisi penjoki dan akun</a></li>
+                           <li><a href="#">Marketing </a></li>
+                        </ul>
+                     </div>
+                  </div>
+                  
+                  <div class="col-lg-3 col-sm-6">
+                     <h2 class="useful_text">Medsos kami</h2>
+                     <div class="social_icon">
+                        <ul>
+                           <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                           <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                         
+                           <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6">
+                     <h2 class="useful_text">Saweria Link</h2>
+                    <img src="images/Saweria.png">
+                    <br>
+                    <p style="display: inline;">Support kami dengan sedekahmu ;) </p>
+                    
+                  </div>
+               </div>
+            </div>
+            <div class="input_main">
+               <input type="text" class="email_text" placeholder="Masukkan pesanmu" name="Enter your email">
+               <div class="subscribe_bt"><a href="#">Donate$</a></div>
+            </div>
+         </div>
+      </div>
+      <!-- footer section end -->
+      <!-- copyright section start -->
+      <div class="copyright_section">
+         <div class="container">
+            <p class="copyright_text">Kami berkerjasama dengan.Supponsor by: <a href="https://html.design">MPLC INDONESIA.</a> 8/4/2025 by: <a href="https://themewagon.com">Velocity store</a></p>
+         </div>
+      </div>
+      <!-- copyright section end -->
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <!-- javascript --> 
+      <script>
+         // Material Select Initialization
+         $(document).ready(function() {
+         $('.mdb-select').materialSelect();
+         $('.select-wrapper.md-form.md-outline input.select-dropdown').bind('focus blur', function () {
+         $(this).closest('.select-outline').find('label').toggleClass('active');
+         $(this).closest('.select-outline').find('.caret').toggleClass('active');
+         });
+         });
+      </script>
+   </body>
+</html>
